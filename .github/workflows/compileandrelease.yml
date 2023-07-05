@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: main
-          release_name: Download CV
+          release_name: cv
           draft: false
           prerelease: false
 
