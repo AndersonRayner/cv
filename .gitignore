@@ -1,0 +1,6 @@
+# Latex ignore files
+*.aux
+*.out
+*.gz
+*.log
+build/

@@ -1,0 +1,365 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,letter,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black', or define color1...
+%\definecolor{color1}{rgb}{0.0, 0.46, 0.07}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{hyperref}
+
+% adjust the page margins
+%\usepackage[scale=0.8]{geometry}
+ \usepackage[left=2cm, right=2cm, top=1.7cm, bottom=1.7cm]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Matt}{Anderson} 
+
+% \address{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1 (626) 379-5999}      % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}           % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}         % optional, remove / comment the line if not wanted
+\email{matt.jl.anderson@gmail.com}     % optional, remove / comment the line if not wanted
+\homepage{andersonrayner.github.io}    % optional, remove / comment the line if not wanted
+\social[github]{andersonrayner}
+\social[test][https://scholar.google.com/citations?user=yG6xm2gAAAAJ&hl=en]{Google Scholar}
+%\extrainfo{}    % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}          % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Field Roboticist~~~~System Integrator~~~~UAS Expert}                    % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle 
+\vspace{-26pt}
+\begin{center}
+	\textbf{Field Roboticist~~~~System Integrator~~~~UAS Expert}
+\end{center}
+
+
+% ---------------- Education ---------------------%
+
+\section{Education}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item{
+    \cventry
+    {}
+    {Ph.D - \textit{A Methodology for Aerodynamic Parameter Estimation of Tail-Sitting Multirotors}}
+    {University of Sydney and Universit\'e Libre de Bruxelles}    
+    {2018}    
+    {} 
+    {}
+}
+
+\item{
+    \cventry
+    {}
+    {B.Eng, Hons. I (Aeronautical)}
+    {University of Sydney}
+    {2010}
+    {}
+    {}
+}
+
+\end{itemize}
+
+\vspace{2pt}
+
+% ---------------- Work Experience ---------------------%
+
+\section{Experience}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item{\cventry
+    {}
+    {Staff Scientist / PostDoc / Lecturer}
+    {Aerospace Robotics and Control Lab (ARCL), Caltech}
+    {2019 -- Current}
+	{}
+	{ 
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Developed a UAV-borne volcanic gas sampling and autonomy system %\hfill {\color{blue}\href{https://arc.aiaa.org/doi/abs/10.2514/6.2021-1409}{(SciTech 2021)}}
+            \item Led flight operations for multistatic SAR UAS experiments (JPL collaboration) %\hfill {\color{blue}\href{https://igarss2021.com/view_paper.php?PaperNum=2261}{(IGARSS 2021)}}
+            \item Ensured UAS regulatory compliance for both NASA (public) and Part 107 UAS
+            \item Overhauled design of low-level firmware and robotic hardware (JPL collaboration)
+            \item Designed tech.~demonstrator aircraft for the Autonomous Flying Ambulance project %\hfill {\color{blue}\href{https://arc.aiaa.org/doi/abs/10.2514/6.2021-1514}{(SciTech 2021)}}
+            \item Helped support 10+ technically diverse ARCL robotics projects towards success
+            \item Developed and lectured \textit{Experimental Robotics} course %\hfill (ME/CS/EE 129)           
+        \end{itemize}
+    }
+}
+
+\vspace{4pt}
+
+\item{\cventry
+    {}
+    {PostDoc / Hardware Integrator}
+    {DARPA Subterranean Challenge (SubT), Jet Propulsion Laboratory}
+    {2018 -- 2019}
+    {}
+    {  
+        \vspace{3pt} 
+        \begin{itemize}
+            %{{\color{blue}\href{https://arxiv.org/abs/2103.11470}{(Pre-Print)}}}
+            \item Led hardware development of a team of heterogeneous robots for underground exploration
+            \item Performed sensor integration, design, and operations for both custom and COTS systems
+            \item Coded embedded low-level software, including interfacing with ROS 
+            \item Developed a redundant, highly-reliable robot safety systems for remote operations
+            \item Formulated safety procedures and protocols for underground operations (including flight) 
+            \item Acted as on-Lab and Remote Field Test Lead for teams of varying sizes and levels of experience 
+        \end{itemize}
+    }
+}
+
+\vspace{4pt}
+
+\item{\cventry
+    {}
+    {Self-Employed}
+    {UAS GCS Operator / Support Crew}
+    {2017 -- 2018}
+    {}
+    {
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Flew high-risk missions including multi-vehicle and UAS-detection field trials as GCS Operator
+            \item Consulted for UAS projects (airframe, components, autopilot, operations)
+            \item Provided technical and logistical support for UAS operations
+        \end{itemize}
+        }
+    }
+    
+\vspace{4pt}
+
+\item{\cventry
+    {}
+    {Researcher / UAV GCS Operator}
+    {The University of Sydney – Aeronautics Department / ACFR}
+    {2013 - 2018}
+    {}
+    {
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Designed Phase 1 submission for the Wasp AE replacement for the Australian Army
+            \item Supported several projects designing, building and operating UAVs for research  
+            \item Unofficial `go-to guy' for UAV Lab support (undergrad theses, PhD work, wind tunnel, etc.)
+        \end{itemize}
+        }
+    }
+
+\vspace{4pt}
+
+\item{\cventry
+    {}
+    {Lecturer and Tutor}
+    {Aeronautics Department, The University of Sydney}
+    {2010 -- 2018}
+    {}
+    {
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Guest lectured for \textit{Professional Engineering 2} and \textit{UAV Operations} % Prof Eng 2: (Workplace Health \& Safety and Sustainability), UAV Ops (low-level hardware design, aircraft design, UAV piloting)
+            \item Tutored subjects including \textit{Safety Systems}, \textit{Mechanical Design}, \textit{Prof. Eng. 1 and 2}, \textit{Aircraft Design} %, Aircraft Construction, System Dynamics and Control, Workshop skills.
+        \end{itemize}
+        }
+    }
+\end{itemize}
+
+\vspace{4pt}
+
+% ---------------- Skills ---------------------%
+
+\section{Technical Skills}
+\vspace{4pt}
+
+\begin{itemize}
+\item
+{
+    \textbf{Robotics}
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Field testing (including Field Lead) in extreme environments with limited time and resources
+            \item System architecture of complex systems with challenging SWaP constraints% consideration to hardware constraints, sensors placement and bandwidth, power constraints, serviceability, and field survivability
+            \item Field serviceability and survivability of systems (including selection, modification, and operation) 
+            \item Integration of COTS and in-house systems/sensors, both during initial builds and retro fits %into existing systems
+            %\item Development of interfacing solutions to enable extra sensing capabilities
+        \end{itemize}
+}
+
+\vspace{4pt}
+
+\item
+{
+    \textbf{Aeronautics}
+        \vspace{3pt} 
+        \begin{itemize} 
+            \item Aircraft design including sizing optimisation, performance modelling and airframe construction
+            \item System identification of both conventional and unconventional designs
+            \item UAS operations for both standard operations and flight testing (both as PIC and GCO)
+            \item Experimental testing including wind tunnel testing and flow visualisation
+            \item Software development including flight controllers, design, and flight analysis software
+        \end{itemize}
+}
+
+\vspace{4pt}
+
+\item
+{
+    \textbf{Software}
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Coding: MATLAB, C/C++, Arduino, git, ROS, python, bash
+            \item UAS: ArduPilot, Mission Planner, qgroundcontrol, PX4, multi-rotor, fixed-wing
+            \item CAD: Solidworks, Inventor
+            \item General: Microsoft Office, \LaTeX, ROS, Windows, Linux
+        \end{itemize}
+}
+
+\vspace{4pt}
+
+\item
+{
+    \textbf{Certifications}
+        \vspace{3pt} 
+        \begin{itemize}
+            \item UAS: Part 107 (FAA), Fixed-Wing Gold Wings (MAAA)
+            \item Safety: First Aid / CPR (American Red Cross), Mental Health First Aid (National Council)
+            % First aid expires 2024-06-08, Certificate ID: 00VAROG
+        \end{itemize}
+}
+
+\end{itemize}
+
+
+
+% %---------------- Other ------------------------------------
+
+\section{Other}
+
+\begin{itemize}
+
+\vspace{4pt}
+
+\item
+{
+    \textbf{Interests}
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Rock climbing, kayaking and adventure
+            \item Radio control aircraft (pylon racing, gliding) and autonomous control
+        \end{itemize}
+}
+
+\vspace{4pt}
+   
+\item
+{
+    \textbf{Selected Awards}
+        \vspace{3pt} 
+        \begin{itemize}
+            \item Best Paper (Unmanned Aerial Systems) (ICRA 2020), 2020
+            \item Earth Science \& Technology Directorate Team Bonus Award (SubT, JPL), 2019
+            \item Best Written Paper (Propulsion) and Best Overall Congress Paper (AIAC 2017), 2017
+            %\item Thesis Seminar Award (Aeronautical), 2010
+        \end{itemize}
+}    
+    
+\end{itemize}
+
+% ---------------- Publications ---------------------%
+\newpage
+
+\section{Publications and Patents}
+\subsection{Published}
+
+\begin{itemize}
+    
+    \item [14.] \underline{\textbf{Anderson M.}}, Lehmkueler, K., Randle, J., Wong, KC, Chung S.-J, ``\textit{UAS Flight Testing in Support of Research for Academia: Getting Started and Experiences from the Fields},`` AIAA SCITECH 2023 Forum, \url{https://arc.aiaa.org/doi/abs/10.2514/6.2023-0100}
+    
+    \item [13.] Prager S., Hawkins B., \underline{\textbf{Anderson M.}}, Chung S.-J., Lavalle M. ``\textit{Development of Ultra-Wideband Software Defined Radar Testbed to support SAR Tomographic Mission Formulation},'' 2022 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2022
+    
+    \item [12.] Agha A., Otsu K., Morrell B., Fan D. D., Thakker R., Santamaria-Navarro A., Kim S.-K., Bouman A., Lei X., Edlund J., Ginting M. F., Ebadi K., \underline{\textbf{Anderson M.}}, Pailevanian T., Terry E., Wolf M., Tagliabue A., Vaquero T. S., Palieri M., Tepsuporn S., Chang Y., Kalantari A., Chavez F., Lopez B., Funabiki N., Miles G., Touma T., Buscicchio A., Tordesillas J., Alatur N., Nash J., Walsh W., Jung S., Lee H., Kanellakis C., Mayo J., Harper S., Kaufmann M., Dixit A., Correa G., Lee C., Gao J., Merewether G., Maldonado-Contreras J., Salhotra G., Silva M. S. D., Ramtoula B., Kubo Y., Fakoorian S., Hatteland A., Kim T., Bartlett T., Stephens A., Kim L., Bergh C., Heiden E., Lew T., Cauligi A., Heywood T., Kramer A., Leopold H. A., Choi C., Daftry S., Toupet O., Wee I., Thakur A., Feras M., Beltrame G., Nikolakopoulos G., Shim D., Carlone L., Burdick J., ``\textit{NeBula: TEAM CoSTAR’s Robotic Autonomy Solution that Won Phase II of DARPA Subterranean Challenge},'' Field Robotics, 2, 1432–1506, 2022, \url{https://doi.org/10.55417/fr.2022047}
+    
+    \item [11.] Lavalle M., Treuhaft R., Ahmed R., Seker I., Hawkins B., Beauchamp R., Haynes M., Prager S., Loria E., Chahat N., Focardi P., Anderson M., Matsuka K., Capuano V., Ragan J., Chung S.-J, ``\textit{Satellite Formation Flying for Surface Topography and Vegetation (STV) Mapping: The Distributed Aperture Radar Tomographic Sensors (DARTS)},`` AGU Fall Meeting Abstracts 2021, U35C-0531
+    
+    \item [10.] Riviere B., Hoenig W., \underline{\textbf{Anderson M.}}, Chung S.-J., ``\textit{Neural Tree Expansion for Multi-Robot Planning in Non-Cooperative Environments},''  IEEE Robotics and Automation Letters, 6 (4), 6868-6875, doi:10.1109/LRA.2021.3096758
+    
+    \item [9.] Hawkins B., \underline{\textbf{Anderson M.}}, Prager S., Chung SJ., Lavalle M., ``\textit{Experiments with Small UAS to Support SAR Tomographic Mission Formulation},'' 2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2021
+    
+    \item [8.] Lavalle M., Seker I., Ragan J., Loria E., Ahmed R., Hawkins B. P., Prager S., Clark D., Beauchamp R., Haynes M., Focardi P., Chahat N., \underline{\textbf{Anderson M.}}, Matsuka K., Capuano V., Chung S.-J, ``\textit{Distributed Aperture RADAR Tomographic Sensors (DARTS) to Map Surface Topography and Vegetation Structure},'' 2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2021
+    
+    \item [7.] \underline{\textbf{Anderson M.}}, Backus S. B., Hughes E., Curtis A., Chung SJ., Stolper E., ``\textit{Development and Deployment of an Autonomous UAV-Borne Gas and Particulate Sample Capture System for Fumarole Sampling},'' AIAA Scitech 2021 Forum, 2021
+
+    \item [6.] Tang E., Spieler P., \underline{\textbf{Anderson M.}}, Chung S.-J, ``\textit{Design of the Next-Generation Autonomous Flying Ambulance},'' AIAA Scitech 2021 Forum, 2021
+    
+    \item [5.] Bouman A., Nadan P., \underline{\textbf{Anderson M.}}, Pastor D., Izraelevitz J., Burdick J., Kennedy B., ``\textit{Design and Autonomous Stabilization of a Ballistically-Launched Multirotor},'' 2020 IEEE International Conference on Robotics and Automation (ICRA), 2020
+    
+    \item [4.] \underline{\textbf{Anderson M.}}, Wong KC, Hendrick P., ``\textit{Modelling Small Electric Brushless Motors and Propellers},'' 17\textsuperscript{th} Australian Aerospace Congress (AIAC), 2017
+    
+    \item [3.] \underline{\textbf{Anderson M.}}, Lehmkuehler K., Wong KC, ``\textit{Flight Experimentation Towards Enhanced UAV Capabilities -- The Multi-rotor Air-Crane},'' 17\textsuperscript{th} Australian International Aerospace Congress (AIAC), 2017
+    
+    \item [2.] \underline{\textbf{Anderson M.}}, Wong, KC, Hendrick, P., ``\textit{Modelling Propellers in FINE/Open using OpenLabs},'' 4\textsuperscript{th} Australasian Unmanned Systems Conference, 2014
+    
+    \item [1.] \underline{\textbf{Anderson M.}}, Lehmkuehler K., Ho, D., Wong, KC, Hendrick, P., ``\textit{Propeller Location Optimisation for Annular Wing Design},'' International Micro Air Vehicle Conference and Flight Competition (IMAV2013), 2013
+    
+\end{itemize}
+
+% \subsection{Preprint}
+
+% \begin{itemize}
+%     \item NeBula: TEAM CoSTAR's Robotic Autonomy Solution that Won Phase II of DARPA Subterranean Challenge
+% \end{itemize}
+
+\subsection{Patent Applications}
+
+\begin{itemize}
+    \item [2.] ``\textit{Autonomous Multi-Purpose Heavy-Lift VTOL},'' Tang E., Spieler P., \underline{\textbf{Anderson M.}}, Chung S.-J, Application number 17451895, Publication date, 2022/4/28, US Patent Office
+    
+    \item [1.] ``\textit{Passive and active stability systems for ballistically launched multirotors},'' Izraelevitz, J., Kennedy B., Bouman A., Pastor Moreno D., \underline{\textbf{Anderson M.}}, Nadan P., Burdick J., Application number 17067397, Publication date, 2021/4/15, US Patent Office
+    
+\end{itemize}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\end{document}
