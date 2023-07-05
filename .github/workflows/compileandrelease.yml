@@ -16,6 +16,13 @@ jobs:
         with:
           root_file: main.tex
 
+      - name: Clean Previous CVs
+        uses: dev-drprasad/delete-older-releases@v0.2
+        with:
+          keep_latest: 0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -23,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: main
-          release_name: cv
+          release_name: Download CV
           draft: false
           prerelease: false
 
