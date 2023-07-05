@@ -19,6 +19,18 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{hyperref}
 
+% Footnotes
+\usepackage{footmisc}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\usepackage[style=iso]{datetime2}
+
 % adjust the page margins
 %\usepackage[scale=0.8]{geometry}
  \usepackage[left=2cm, right=2cm, top=1.7cm, bottom=1.7cm]{geometry}
@@ -26,6 +38,7 @@
 %\setlength{\makecvheadnamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{import}
+
 
 % personal data
 \name{Matt}{Anderson} 
@@ -361,5 +374,9 @@
 %\nocite{*}
 %\bibliographystyle{plain}
 %\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\vfill
+\enlargethispage{\footskip}
+\blfootnote{Last Updated: \today}
 
 \end{document}
