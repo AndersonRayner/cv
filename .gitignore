@@ -4,3 +4,6 @@
 *.gz
 *.log
 build/
+
+# Ingore built PDF (build server-side)
+main.pdf
