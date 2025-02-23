@@ -6,45 +6,6 @@ on:
     branches: main
     
 jobs:
-  build_bio:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: bio.tex
-
-      - name: Clean Previous CVs
-        uses: dev-drprasad/delete-older-releases@v0.2.1
-        with:
-          keep_latest: 1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: main_bio
-          release_name: Download Bio
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./bio.pdf
-          asset_name: ANDERSON_Matt_Bio.pdf
-          asset_content_type: pdf
-
   build_latex:
     runs-on: ubuntu-latest
     steps:
