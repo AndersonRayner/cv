@@ -5,19 +5,15 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
-\documentclass[12pt,letter,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,letter,sans]{moderncv}
 
 % modern themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black', or define color1...
-%\definecolor{color1}{rgb}{0.78, 0.21, 0.68}
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 % Footnotes
 \usepackage{footmisc}
@@ -32,7 +28,6 @@
 \usepackage[style=iso]{datetime2}
 
 % adjust the page margins
-%\usepackage[scale=0.8]{geometry}
  \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -41,29 +36,17 @@
 \usepackage{pdfpages}
 
 % personal data
-\name{Matt}{Anderson} 
+\name{}{Matt Anderson} 
 
 % \address{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+1 (626) 379-5999}      % optional, remove / comment the line if not wanted
-%\phone[fixed]{01234 123456}           % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}         % optional, remove / comment the line if not wanted
 \email{matt.jl.anderson@gmail.com}     % optional, remove / comment the line if not wanted
 \homepage{andersonrayner.github.io}    % optional, remove / comment the line if not wanted
 \social[github]{andersonrayner}
 \social[test][scholar.google.com/citations?user=yG6xm2gAAAAJ&hl=en]{Google Scholar}
 %\extrainfo{}    % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}          % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Field Roboticist~~~~System Integrator~~~~UAS Expert}                    % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -75,7 +58,6 @@
 \begin{center}
 	\textbf{Field Roboticist~~~~System Integrator~~~~UAS Expert}
 \end{center}
-
 
 % ---------------- Education ---------------------%
 
@@ -398,9 +380,7 @@
 %\begin{itemize}
 
     %\item [4.] Jeon, S-Y., Hawkins, B., Prager, S., \underline{\textbf{Anderson, M.}}, Moro, S., Loria, E., Beauchamp, R., Chung, S.-J., Lavalle, M., ``\textit{Experimental Demonstration of Bistatic UAV-Borne SAR and InSAR},'' Submitted to 15\textsuperscript{th} European Conference on Synthetic Aperture Radar (2024)
-    
-    %     \item NeBula: TEAM CoSTAR's Robotic Autonomy Solution that Won Phase II of DARPA Subterranean Challenge
-    
+
 %\end{itemize}
 
 \newpage
@@ -422,14 +402,6 @@
 %\subsection{Patent Applications}
 %\begin{itemize}
 %\end{itemize}
-
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 \vfill
 \enlargethispage{\footskip}
