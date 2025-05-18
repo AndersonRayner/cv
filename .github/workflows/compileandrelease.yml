@@ -1,4 +1,3 @@
-
 name: Compile Latex and Release PDF  
 
 on:
@@ -17,12 +16,15 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Clean Previous CVs
-        uses: dev-drprasad/delete-older-releases@v0.3.4
-        with:
-          keep_latest: 1
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+
+      - name: Delete existing release and tag (main)
+        run: |
+          gh release delete main -y || true
+          git push origin --delete main || true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         id: create_release
@@ -44,4 +46,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
           asset_path: ./main.pdf
           asset_name: ANDERSON_Matt.pdf
-          asset_content_type: pdf
+          asset_content_type: application/pdf
